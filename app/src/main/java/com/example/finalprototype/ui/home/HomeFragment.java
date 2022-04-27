@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.finalprototype.R;
+import com.example.finalprototype.data;
 import com.example.finalprototype.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -26,6 +28,14 @@ public class HomeFragment extends Fragment {
 
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+        //proof of concept for static database
+        data d = new data();
+        TextView cur = (TextView) root.findViewById(R.id.time1);
+        cur.setText(d.getWorkout(1).get(0));
+        cur = (TextView) root.findViewById(R.id.duration1);
+        cur.setText(d.getWorkout(1).get(1));
+
         return root;
     }
 
