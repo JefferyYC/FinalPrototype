@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Schedule">
+
+    <ToggleButton
+        android:id="@+id/meditation"
+        android:layout_width="168dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="24dp"
+        android:text="ToggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breathingTwo" />
+
+    <Button
+        android:id="@+id/schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="17dp"
+        android:text="Schedule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/breathingTwo"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="29dp"
+        android:text="ToggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breathingOne" />
+
+    <ToggleButton
+        android:id="@+id/breathingOne"
+        android:layout_width="168dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="40dp"
+        android:text="ToggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/suggested" />
+
+    <TextView
+        android:id="@+id/suggested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="92dp"
+        android:text="Suggested"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/duration" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="140dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:hint="3/22"
+        android:inputType="date"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTime"
+        app:layout_constraintTop_toTopOf="@+id/editTextTime" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="129dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:hint="12:00"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule" />
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="Start Time: "
+        app:layout_constraintEnd_toStartOf="@+id/editTextDate"
+        app:layout_constraintTop_toTopOf="@+id/editTextDate" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
+        android:text="Duration: "
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/startTime" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="157dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="14dp"
+        android:ems="10"
+        android:hint="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/min"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+    <TextView
+        android:id="@+id/min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="104dp"
+        android:text="min"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

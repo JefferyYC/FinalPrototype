@@ -1,5 +1,6 @@
 package com.example.finalprototype.ui.dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.finalprototype.Schedule;
 import com.example.finalprototype.databinding.FragmentDashboardBinding;
 
 public class DashboardFragment extends Fragment {
@@ -32,14 +34,15 @@ public class DashboardFragment extends Fragment {
         calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                goScheduleScreen();
             }
         });
         return root;
     }
 
     public void goScheduleScreen() {
-
+        Intent intent = new Intent(getActivity(), Schedule.class);
+        startActivity(intent);
     }
 
     @Override
