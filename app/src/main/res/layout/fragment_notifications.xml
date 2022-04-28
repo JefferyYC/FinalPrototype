@@ -19,4 +19,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="495dp"
+        android:layout_height="793dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/personal_stat"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-28dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="104dp"
+        android:layout_height="86dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/schedule"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="673dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="112dp"
+        android:layout_height="83dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/today"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="676dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
