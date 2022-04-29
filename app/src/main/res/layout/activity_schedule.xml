@@ -8,51 +8,65 @@
 
     <ToggleButton
         android:id="@+id/meditation"
-        android:layout_width="168dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="121dp"
+        android:layout_width="243dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/meditation_toggle"
         android:text="ToggleButton"
+        android:textOff="Meditation"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breathingTwo" />
+        app:layout_constraintTop_toBottomOf="@+id/breathingTwo"
+        app:layout_constraintVertical_bias="0.163" />
 
     <Button
         android:id="@+id/schedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="123dp"
+        android:layout_height="49dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="17dp"
+        android:background="@drawable/schedule_button"
+        android:elevation="4dp"
         android:text="Schedule"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <ToggleButton
         android:id="@+id/breathingTwo"
-        android:layout_width="165dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="29dp"
+        android:layout_width="243dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/belly_breath_toggle"
         android:text="ToggleButton"
+        android:textOff="Belly Breathing"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/breathingOne" />
 
     <ToggleButton
         android:id="@+id/breathingOne"
-        android:layout_width="168dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="243dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/box_breath_toggle"
         android:text="ToggleButton"
+        android:textOff="Box Breathing"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/suggested" />
 
     <TextView
         android:id="@+id/suggested"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="97dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
         android:text="Suggested"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/duration" />
 
@@ -64,6 +78,7 @@
         android:ems="10"
         android:hint="3/22"
         android:inputType="date"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toStartOf="@+id/editTextTime"
         app:layout_constraintTop_toTopOf="@+id/editTextTime" />
 
@@ -76,6 +91,7 @@
         android:ems="10"
         android:hint="12:00"
         android:inputType="time"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schedule" />
 
@@ -84,8 +100,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="8dp"
         android:text="Start Time: "
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toStartOf="@+id/editTextDate"
         app:layout_constraintTop_toTopOf="@+id/editTextDate" />
 
@@ -93,9 +110,10 @@
         android:id="@+id/duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
         android:text="Duration: "
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
         app:layout_constraintTop_toBottomOf="@+id/startTime" />
 
@@ -108,6 +126,7 @@
         android:ems="10"
         android:hint="10"
         android:inputType="number"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toStartOf="@+id/min"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
@@ -118,6 +137,7 @@
         android:layout_marginTop="56dp"
         android:layout_marginEnd="104dp"
         android:text="min"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
 
