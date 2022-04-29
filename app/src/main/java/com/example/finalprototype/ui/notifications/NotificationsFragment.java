@@ -1,6 +1,7 @@
 package com.example.finalprototype.ui.notifications;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.finalprototype.R;
+import com.example.finalprototype.data;
 import com.example.finalprototype.databinding.FragmentNotificationsBinding;
+
 
 public class NotificationsFragment extends Fragment {
 
@@ -26,6 +30,18 @@ public class NotificationsFragment extends Fragment {
 
         final TextView textView = binding.textNotifications;
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+        TextView boxFinished = (TextView) root.findViewById(R.id.B1Finished);
+        data d = new data();
+        String finish = String.valueOf(d.getCompleted(0)); //default value now in data
+        boxFinished.setText(finish);
+
+//        Log.d("finish",finish);
+
+        TextView boxMissed = (TextView) root.findViewById(R.id.B1Missed);
+        String miss = String.valueOf(d.getIncomplete(0)); //default value now in data
+        boxMissed.setText(miss);
+    
         return root;
     }
 
