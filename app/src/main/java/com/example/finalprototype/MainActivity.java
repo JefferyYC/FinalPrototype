@@ -1,6 +1,9 @@
 package com.example.finalprototype;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -35,6 +38,21 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor edit = pref.edit();
+        // at launch remove schedule information for meditation
+        edit.remove("5");
+        edit.commit();
+
+        if (getIntent().getExtras() != null)
+        {
+            // when directed from schedule screen, get state update from intent, and save in shared preference
+            // that would be accessed by the dashboard fragment
+            Bundle bundle = getIntent().getExtras();
+            edit.putBoolean("5", bundle.getBoolean("5"));
+            edit.commit();
+        }
     }
 
 }

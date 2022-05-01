@@ -1,7 +1,10 @@
 package com.example.finalprototype.ui.dashboard;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +32,15 @@ public class DashboardFragment extends Fragment {
 
         // final TextView textView = binding.textDashboard;
         // dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        // check if meditation block is scheduled
+        ImageView meditationBlock = binding.meditationBlock;
+        if (pref.getBoolean("5", false))
+        {
+            meditationBlock.setVisibility(View.VISIBLE);
+        }
 
         ImageView calendar = binding.calendar;
         calendar.setOnClickListener(new View.OnClickListener() {

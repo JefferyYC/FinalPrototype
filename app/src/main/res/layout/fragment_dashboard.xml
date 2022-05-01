@@ -16,4 +16,15 @@
         android:src="@drawable/calendar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/meditationBlock"
+        android:layout_width="85dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="305dp"
+        android:src="@drawable/meditation_block"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/calendar"
+        app:layout_constraintTop_toTopOf="@+id/calendar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
