@@ -16,6 +16,7 @@
         android:background="@drawable/meditation_toggle"
         android:text="ToggleButton"
         android:textOff="Meditation"
+        android:textOn="Meditation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/breathingTwo"
@@ -43,6 +44,7 @@
         android:background="@drawable/belly_breath_toggle"
         android:text="ToggleButton"
         android:textOff="Belly Breathing"
+        android:textOn="Belly Breathing"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/breathingOne" />
 
@@ -55,6 +57,7 @@
         android:background="@drawable/box_breath_toggle"
         android:text="ToggleButton"
         android:textOff="Box Breathing"
+        android:textOn="Box Breathing"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/suggested" />
 
