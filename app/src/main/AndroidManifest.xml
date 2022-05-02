@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalPrototype">
         <activity
+            android:name=".Exercise"
+            android:exported="false" />
+        <activity
+            android:name=".StartNew"
+            android:exported="false" />
+        <activity
             android:name=".Schedule"
             android:exported="false" />
         <activity

@@ -32,14 +32,13 @@ public class NotificationsFragment extends Fragment {
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         TextView boxFinished = (TextView) root.findViewById(R.id.B1Finished);
-        data d = new data();
-        String finish = String.valueOf(d.getCompleted(0)); //default value now in data
+        String finish = String.valueOf(data.getCompleted(0)); //default value now in data
         boxFinished.setText(finish);
 
 //        Log.d("finish",finish);
 
         TextView boxMissed = (TextView) root.findViewById(R.id.B1Missed);
-        String miss = String.valueOf(d.getIncomplete(0)); //default value now in data
+        String miss = String.valueOf(data.getIncomplete(0)); //default value now in data
         boxMissed.setText(miss);
     
         return root;

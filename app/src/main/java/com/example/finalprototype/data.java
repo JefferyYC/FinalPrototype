@@ -61,33 +61,33 @@ public class data {
 
         //instantiating counts based on figma data
         completed = new int[] {6, 7, 5};
-        incomplete = new int[] {3, 2, 1};
+        incomplete = new int[] {0, 2, 1};
         //[0, 1, 2] correspond to [breathing one, breathing two, meditation]
 
     }
 
-    public ArrayList<String> getWorkout(int code) {
+    public static ArrayList<String> getWorkout(int code) {
         return workouts.get(code).get();
     }
 
-    public int getCompleted(int type) {
+    public static int getCompleted(int type) {
         return completed[type];
     }
 
-    public void incrementCompleted(int type) {
-        completed[type]++;
+    public static void incrementCompleted(int type) {
+        completed[type] = completed[type] + 1;
     }
 
-    public int getIncomplete(int type) {
+    public static int getIncomplete(int type) {
         return incomplete[type];
     }
 
-    public void incrementIncomplete(int type) {
-        incomplete[type]++;
+    public static void incrementIncomplete(int type) {
+        incomplete[type] = incomplete[type] + 1;
     }
 
-    public boolean getScheduled(int code) { return workouts.get(code).getState(); }
+    public static boolean getScheduled(int code) { return workouts.get(code).getState(); }
 
-    public void setScheduled(int code, boolean state) { workouts.get(code).setState(state);}
+    public static void setScheduled(int code, boolean state) { workouts.get(code).setState(state);}
 
 }
