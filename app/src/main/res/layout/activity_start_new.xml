@@ -77,16 +77,18 @@
         android:id="@+id/duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginEnd="8dp"
         android:text="Duration: "
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.196" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/dur"
         android:layout_width="157dp"
         android:layout_height="51dp"
         android:layout_marginEnd="16dp"

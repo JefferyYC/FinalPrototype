@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.finalprototype.R;
 import com.example.finalprototype.StartNew;
 import com.example.finalprototype.data;
+import com.example.finalprototype.data_helper;
 import com.example.finalprototype.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -33,11 +34,10 @@ public class HomeFragment extends Fragment {
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         //proof of concept for static database
-        data d = new data();
         TextView cur = (TextView) root.findViewById(R.id.time1);
-        cur.setText(data.getWorkout(1).get(0));
+        cur.setText(data_helper.getData().getWorkout(1).get(0));
         cur = (TextView) root.findViewById(R.id.duration1);
-        cur.setText(data.getWorkout(1).get(1));
+        cur.setText(data_helper.getData().getWorkout(1).get(1));
 
         Button start = binding.startNew;
         start.setOnClickListener(new View.OnClickListener() {

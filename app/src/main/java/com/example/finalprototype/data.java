@@ -35,9 +35,11 @@ public class data {
         }
     }
 
-    static int[] completed;
-    static int[] incomplete;
-    static HashMap<Integer, Workout> workouts;
+    public int completed;
+    public int incomplete;
+    public int duration;
+    public HashMap<Integer, Workout> workouts;
+    public data inst;
 
     public data() {
 
@@ -60,34 +62,34 @@ public class data {
 
 
         //instantiating counts based on figma data
-        completed = new int[] {6, 7, 5};
-        incomplete = new int[] {0, 2, 1};
-        //[0, 1, 2] correspond to [breathing one, breathing two, meditation]
+        completed = 6;
+        incomplete = 0;
 
     }
 
-    public static ArrayList<String> getWorkout(int code) {
+
+    public ArrayList<String> getWorkout(int code) {
         return workouts.get(code).get();
     }
 
-    public static int getCompleted(int type) {
-        return completed[type];
+    public int getCompleted() {
+        return this.completed;
     }
 
-    public static void incrementCompleted(int type) {
-        completed[type] = completed[type] + 1;
+    public void incrementCompleted() {
+        this.completed += 1;
     }
 
-    public static int getIncomplete(int type) {
-        return incomplete[type];
+    public int getIncomplete() {
+        return this.incomplete;
     }
 
-    public static void incrementIncomplete(int type) {
-        incomplete[type] = incomplete[type] + 1;
+    public void incrementIncomplete() {
+        this.incomplete += 1;
     }
 
-    public static boolean getScheduled(int code) { return workouts.get(code).getState(); }
+    public boolean getScheduled(int code) { return workouts.get(code).getState(); }
 
-    public static void setScheduled(int code, boolean state) { workouts.get(code).setState(state);}
+    public void setScheduled(int code, boolean state) { workouts.get(code).setState(state);}
 
 }

@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.finalprototype.R;
 import com.example.finalprototype.data;
+import com.example.finalprototype.data_helper;
 import com.example.finalprototype.databinding.FragmentNotificationsBinding;
 
 
@@ -32,13 +33,13 @@ public class NotificationsFragment extends Fragment {
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         TextView boxFinished = (TextView) root.findViewById(R.id.B1Finished);
-        String finish = String.valueOf(data.getCompleted(0)); //default value now in data
+        String finish = String.valueOf(data_helper.getData().getCompleted()); //default value now in data
         boxFinished.setText(finish);
 
 //        Log.d("finish",finish);
 
         TextView boxMissed = (TextView) root.findViewById(R.id.B1Missed);
-        String miss = String.valueOf(data.getIncomplete(0)); //default value now in data
+        String miss = String.valueOf(data_helper.getData().getIncomplete()); //default value now in data
         boxMissed.setText(miss);
     
         return root;

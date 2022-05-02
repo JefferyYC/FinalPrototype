@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class Exercise extends AppCompatActivity {
@@ -25,8 +26,10 @@ public class Exercise extends AppCompatActivity {
         }
         setContentView(R.layout.activity_exercise);
 
+
         button = (Button) findViewById(R.id.button);
         timer = (TextView) findViewById(R.id.timer);
+        timer.setText(countToTime(data_helper.getData().duration * 60));
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -36,7 +39,7 @@ public class Exercise extends AppCompatActivity {
                     button.setText("Exit");
                     button.setBackgroundResource(R.drawable.exit_button);
                     //5 minutes for testing purposes
-                    count = 300;
+                    count = data_helper.getData().duration * 60;
                     new CountDownTimer(count * 1000, 1000) {
                         public void onTick(long millisUntilFinished) {
                             findViewById(R.id.spinner).animate().rotationBy(90).start();
@@ -45,8 +48,8 @@ public class Exercise extends AppCompatActivity {
                         }
 
                         public void onFinish() {
-                            data.incrementCompleted(0);
                             timer.setText("Great Work!");
+                            data_helper.getData().incrementCompleted();
                             try {
                                 Thread.sleep(1000);
                             } catch (Exception e) {
@@ -56,14 +59,14 @@ public class Exercise extends AppCompatActivity {
                         }
                     }.start();
                 } else {
-                    data.incrementIncomplete(0);
+                    data_helper.getData().incrementIncomplete();
                     goHomeScreen();
                 }
             }
         });
     }
 
-    private String countToTime(int n) {
+    public String countToTime(int n) {
         String ret = "00:0";
         ret += Integer.toString(n/60) + ":";
         if (n % 60 < 10) {
