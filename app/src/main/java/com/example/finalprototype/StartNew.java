@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class StartNew extends AppCompatActivity {
@@ -26,13 +27,30 @@ public class StartNew extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                data_helper.getData().duration = Integer.parseInt(dur.getText().toString());
+                try {
+                    data_helper.getData().duration = Integer.parseInt(dur.getText().toString());
+                } catch (Exception e) {
+                    data_helper.getData().duration = 5;
+                }
+                goExerciseScreen();
+            }
+        });
+
+        ImageView exit = findViewById(R.id.exitbutton);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 goHomeScreen();
             }
         });
     }
 
     public void goHomeScreen() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void goExerciseScreen() {
         Intent intent = new Intent(this, Exercise.class);
         startActivity(intent);
     }

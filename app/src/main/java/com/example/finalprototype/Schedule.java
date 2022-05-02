@@ -8,6 +8,10 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+
+import com.example.finalprototype.ui.dashboard.DashboardFragment;
 
 public class Schedule extends AppCompatActivity {
 
@@ -23,6 +27,14 @@ public class Schedule extends AppCompatActivity {
 
         Button schedule = findViewById(R.id.schedule);
         schedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goHomeScreen();
+            }
+        });
+
+        ImageView exit = findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 goHomeScreen();

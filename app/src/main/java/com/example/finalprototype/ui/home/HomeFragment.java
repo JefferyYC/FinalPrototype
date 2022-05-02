@@ -47,7 +47,10 @@ public class HomeFragment extends Fragment {
         Button box = binding.box;
         box.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { goExerciseScreen();}
+            public void onClick(View view) {
+                data_helper.getData().duration = 5;
+                goExerciseScreen();
+            }
         });
 
         return root;
