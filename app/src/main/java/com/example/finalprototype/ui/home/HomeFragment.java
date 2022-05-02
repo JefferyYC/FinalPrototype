@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.finalprototype.Exercise;
 import com.example.finalprototype.R;
 import com.example.finalprototype.StartNew;
 import com.example.finalprototype.data;
@@ -30,14 +31,10 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        /*
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-
-        //proof of concept for static database
-        TextView cur = (TextView) root.findViewById(R.id.time1);
-        cur.setText(data_helper.getData().getWorkout(1).get(0));
-        cur = (TextView) root.findViewById(R.id.duration1);
-        cur.setText(data_helper.getData().getWorkout(1).get(1));
+        */
 
         Button start = binding.startNew;
         start.setOnClickListener(new View.OnClickListener() {
@@ -47,11 +44,22 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        Button box = binding.box;
+        box.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { goExerciseScreen();}
+        });
+
         return root;
     }
 
     public void goStartScreen() {
         Intent intent = new Intent(getActivity(), StartNew.class);
+        startActivity(intent);
+    }
+
+    public void goExerciseScreen() {
+        Intent intent = new Intent(getActivity(), Exercise.class);
         startActivity(intent);
     }
 
