@@ -38,6 +38,7 @@ public class data {
     public int completed;
     public int incomplete;
     public int duration;
+    public int goal;
     public HashMap<Integer, Workout> workouts;
     public data inst;
 
@@ -62,7 +63,8 @@ public class data {
 
 
         //instantiating counts based on figma data
-        completed = 6;
+        completed = 4;
+        goal = 21;
         incomplete = 0;
 
     }
@@ -87,6 +89,10 @@ public class data {
     public void incrementIncomplete() {
         this.incomplete += 1;
     }
+
+    public void setGoal (int g) { this.goal = g; }
+
+    public int getGoal () { return this.goal; }
 
     public boolean getScheduled(int code) { return workouts.get(code).getState(); }
 
