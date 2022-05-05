@@ -29,7 +29,7 @@ public class Schedule extends AppCompatActivity {
         schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goHomeScreen();
+                goCalendar();
             }
         });
 
@@ -37,15 +37,16 @@ public class Schedule extends AppCompatActivity {
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goHomeScreen();
+                goCalendar();
             }
         });
     }
 
-    public void goHomeScreen() {
+    public void goCalendar() {
         Intent intent = new Intent(this, MainActivity.class);
         // assume only demoing "Add meditation for Apr 27 12:00 - 12:30"
         intent.putExtra("5", true);
+        intent.putExtra("calendar", true);
         startActivity(intent);
     }
 }

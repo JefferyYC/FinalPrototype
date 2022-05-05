@@ -8,6 +8,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Exercise extends AppCompatActivity {
@@ -26,6 +27,13 @@ public class Exercise extends AppCompatActivity {
         }
         setContentView(R.layout.activity_exercise);
 
+        ImageView exit = findViewById(R.id.exitExercise);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goHomeScreen();
+            }
+        });
 
         button = (Button) findViewById(R.id.button);
         timer = (TextView) findViewById(R.id.timer);

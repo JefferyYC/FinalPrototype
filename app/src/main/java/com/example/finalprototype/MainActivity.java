@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
             // that would be accessed by the dashboard fragment
             Bundle bundle = getIntent().getExtras();
             edit.putBoolean("5", bundle.getBoolean("5"));
+            if (bundle.getBoolean("calendar"))
+            {
+                navController.navigate(R.id.navigation_dashboard);
+            }
             edit.commit();
         }
     }
