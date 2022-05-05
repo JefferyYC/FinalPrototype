@@ -46,6 +46,8 @@ public class Exercise extends AppCompatActivity {
                     going = true;
                     button.setText("Exit");
                     button.setBackgroundResource(R.drawable.exit_button);
+                    ImageView x = findViewById(R.id.imageView3);
+                    x.setVisibility(View.INVISIBLE);
                     //5 minutes for testing purposes
                     count = data_helper.getData().duration * 60;
                     new CountDownTimer(count * 1000, 1000) {

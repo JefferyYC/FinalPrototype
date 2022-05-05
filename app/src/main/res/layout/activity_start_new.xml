@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Schedule">
 
-    <ToggleButton
-        android:id="@+id/meditation"
-        android:layout_width="243dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="38dp"
-        android:background="@drawable/meditation_toggle"
-        android:text="ToggleButton"
-        android:textOff="Meditation"
-        android:textOn="Meditation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breathingTwo"
-        app:layout_constraintVertical_bias="0.163" />
-
     <ImageView
         android:id="@+id/exitbutton"
         android:layout_width="wrap_content"
@@ -38,52 +22,29 @@
         android:id="@+id/start"
         android:layout_width="123dp"
         android:layout_height="49dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="17dp"
         android:background="@drawable/schedule_button"
         android:elevation="4dp"
         android:text="Start"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-    <ToggleButton
-        android:id="@+id/breathingTwo"
-        android:layout_width="243dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/belly_breath_toggle"
-        android:text="ToggleButton"
-        android:textOff="Belly Breathing"
-        android:textOn="Belly Breathing"
+        app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breathingOne" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        tools:ignore="TextContrastCheck" />
 
     <ToggleButton
         android:id="@+id/breathingOne"
         android:layout_width="243dp"
         android:layout_height="80dp"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="68dp"
         android:background="@drawable/box_breath_toggle"
         android:text="ToggleButton"
         android:textOff="Box Breathing"
         android:textOn="Box Breathing"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/suggested" />
-
-    <TextView
-        android:id="@+id/suggested"
-        android:layout_width="97dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:text="Suggested"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/duration" />
 
     <TextView
         android:id="@+id/duration"
@@ -97,7 +58,7 @@
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196" />
+        app:layout_constraintVertical_bias="0.16" />
 
     <EditText
         android:id="@+id/dur"
@@ -111,7 +72,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/min"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176" />
+        app:layout_constraintVertical_bias="0.139" />
 
     <TextView
         android:id="@+id/min"
@@ -123,6 +84,47 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213" />
+        app:layout_constraintVertical_bias="0.178" />
+
+    <ToggleButton
+        android:id="@+id/meditation"
+        android:layout_width="243dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/meditation_toggle"
+        android:text="ToggleButton"
+        android:textOff="Meditation"
+        android:textOn="Meditation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breathingTwo"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <ToggleButton
+        android:id="@+id/breathingTwo"
+        android:layout_width="243dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/belly_breath_toggle"
+        android:text="ToggleButton"
+        android:textOff="Belly Breathing"
+        android:textOn="Belly Breathing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breathingOne" />
+
+    <TextView
+        android:id="@+id/suggested"
+        android:layout_width="97dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="Suggested"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/duration" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
