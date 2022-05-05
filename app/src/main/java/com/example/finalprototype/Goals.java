@@ -45,6 +45,7 @@ public class Goals extends AppCompatActivity {
 
     public void goStatScreen() {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("stats", true);
         startActivity(intent);
     }
 }
